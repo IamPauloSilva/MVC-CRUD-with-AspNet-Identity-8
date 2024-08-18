@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MVCCRUD.Models;
 
 namespace MVCCRUD.Data;
 
@@ -9,4 +10,7 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+    public DbSet<Student> Students { get; set; } 
+    public DbSet<Premium> Premiums { get; set; }
 }
